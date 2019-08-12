@@ -42,6 +42,8 @@ foreach ($leagues as $league) {
                 @$gamesPlayed[$away]++;
 
                 $league = $matches['league'];
+                $league = str_replace(['1', '2', '3', '4', '5'], '', $league);
+
                 continue;
             }
 
