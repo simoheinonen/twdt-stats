@@ -59,6 +59,11 @@ foreach ($leagues as $league) {
                 continue;
             }
 
+            $mvp = 0;
+            if (stripos($row, '<MVP>') !== false) {
+                $mvp = 1;
+            }
+
             $team = $squads[strtolower($pilot)];
 
             if (isset($gamesPlayed[$team])) { // trades complicate things so default to prev game
@@ -74,6 +79,7 @@ foreach ($leagues as $league) {
                 'game' => $game,
                 'league' => $league,
                 'week' => $week,
+                'mvp' => $mvp,
             ];
 
             echo implode(',', $data) . PHP_EOL;
