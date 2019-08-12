@@ -59,6 +59,12 @@ foreach ($leagues as $l) {
                 $league = $matches['league'];
                 $league = str_replace(['1', '2', '3', '4', '5'], '', $league);
 
+                if ($matches['home_score'] === '15:00' || $matches['home_score'] === '50') {
+                   $winner = $home;
+                } else {
+                   $winner = $away;
+                } 
+
                 continue;
             }
 
@@ -104,6 +110,7 @@ foreach ($leagues as $l) {
                 'week' => $week,
                 'mvp' => $mvp,
                 'ship' => $ship,
+                'win' => $winner === $team ? '1' : '0',
             ];
 
             echo implode(',', $data) . PHP_EOL;
