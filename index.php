@@ -103,14 +103,12 @@ foreach ($leagues as $l) {
                 'league' => $league,
                 'week' => $week,
                 'mvp' => $mvp,
-                #'ship' => $ship,
+                'ship' => $ship,
             ];
 
             echo implode(',', $data) . PHP_EOL;
         }
     }
-
-    exit;
 }
 
 function getShip(string $row, string $league) {
