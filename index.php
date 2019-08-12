@@ -61,13 +61,17 @@ foreach ($leagues as $league) {
 
             $team = $squads[strtolower($pilot)];
 
+            if (isset($gamesPlayed[$team])) { // trades complicate things so default to prev game
+                $game = $gamesPlayed[$team];
+            }
+
             $data = [
                 'pilot' => $pilot,
                 'stars' => (int) $matches['stars'],
                 'kills' => (int) $matches['kills'],
                 'deaths' => (int) $matches['deaths'],
                 'team' => $team,
-                'game' => $gamesPlayed[$team],
+                'game' => $game,
                 'league' => $league,
                 'week' => $week,
             ];
