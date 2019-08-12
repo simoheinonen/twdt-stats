@@ -72,7 +72,7 @@ foreach ($leagues as $l) {
             if (stripos($row, '*') !== false) {
                 $mvp = 1;
             }
-            $row = str_replace(['(S)', '=T=', '<J>', '<W>', '*', '<L>'], '', $row);
+            $row = str_replace(['(S)', '=T=', '<J>', '<W>', '*', '<L>'], ' ', $row);
 
 
             preg_match($regex, $row, $matches);
