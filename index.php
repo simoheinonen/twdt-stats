@@ -99,6 +99,20 @@ foreach ($leagues as $l) {
                 $game = $gamesPlayed[$team];
             }
 
+            if ($pilot === 'pineapple expres' && $week == 1 && $l === 'twdtd' && $home == 'Paddington' && $away === 'Pirates') {
+                $game = 2;
+            } elseif ($pilot === 'Tripin' && $week == 1 && $l === 'twdtd' && $home == 'Pirates' && $away === 'Lag & Luck') {
+                $game = 1;
+            } elseif ($pilot === 'Tripin' && $week == 1 && $l === 'twdtd' && $home == 'Paddington' && $away === 'Pirates') {
+                $game = 2;
+            } elseif ($pilot === 'Tripin' && $week == 1 && $l === 'twdtj' && $home == 'WIN OR DIE' && $away === 'Pirates') {
+                $game = 2;
+            } elseif ($pilot === 'Tripin' && $week == 1 && $l === 'twdtj' && $home == 'Paddington' && $away === 'Pirates') {
+                $game = 1;
+            } elseif ($pilot === 'Ra' && $week == 1 && $l === 'twdtj' && $home == 'Fish' && $away === 'Mist') {
+                $game = 2;
+            }
+
             $data = [
                 'pilot' => $pilot,
                 'stars' => (int) $matches['stars'],
