@@ -16,6 +16,8 @@ $aliases = [
 
 $leagues = ['twdtb', 'twdtd', 'twdtj'];
 
+header('Access-Control-Allow-Origin: *');
+
 echo 'pilot,stars,kills,deaths,team,game,league,week,mvp,ship,win'.PHP_EOL;
 
 foreach ($leagues as $l) {
