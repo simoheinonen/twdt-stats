@@ -16,6 +16,8 @@ $aliases = [
 
 $leagues = ['twdtb', 'twdtd', 'twdtj'];
 
+echo 'pilot,stars,kills,deaths,team,game,league,week,mvp,ship,win'.PHP_EOL;
+
 foreach ($leagues as $l) {
     $content = file_get_contents($l . '.txt');
     $matches = preg_split("/\n\n/", $content);
